@@ -174,6 +174,33 @@ body.opening .seal{opacity:1!important}
  .hero:before{font-size:105px;left:-35px}.hero:after{font-size:95px;right:-28px}
  .section:before{font-size:125px;left:-48px}.section:after{font-size:115px;right:-45px}
 }
+
+/* Extra floral compositions for the cover, all 18s, and RSVP finale */
+.hero-card{isolation:isolate}
+.hero-card .floral-corner,.rsvp-floral{pointer-events:none}
+.hero-card:before{background:
+ radial-gradient(circle at 8% 12%,#c79ac755 0 8px,transparent 9px),
+ radial-gradient(circle at 12% 18%,#a86bab33 0 14px,transparent 15px),
+ radial-gradient(circle at 88% 82%,#c79ac755 0 10px,transparent 11px),
+ linear-gradient(145deg,#ead8ee,#fffdfa 48%,#e4cfe9)!important}
+.section:has(.people):before{content:"❀  ✿  ❀"!important;font-size:150px!important;left:-42px!important;top:2%!important;letter-spacing:8px}
+.section:has(.people):after{content:"✿  ❀  ✿"!important;font-size:145px!important;right:-45px!important;bottom:2%!important;letter-spacing:8px}
+.section:has(.people) .card{background:
+ radial-gradient(circle at 5% 7%,#d8b5dc22 0 18px,transparent 19px),
+ radial-gradient(circle at 95% 93%,#d8b5dc22 0 20px,transparent 21px),
+ #fffdfbcc!important}
+.section:has(.people) .people{border-radius:2px}
+.section:has(.people) .people:after{content:"❀";position:absolute;color:#b78abc;font-size:44px;left:50%;bottom:-24px;transform:translateX(-50%);background:#f8eff7;padding:0 12px}
+.qr-section,.section:has(.qr){position:relative;overflow:hidden}
+.section:has(.qr):before{content:"❀  ✿  ❀"!important;font-size:155px!important;left:-42px!important;top:5%!important}
+.section:has(.qr):after{content:"✿  ❀"!important;font-size:150px!important;right:-38px!important;bottom:5%!important}
+.section:has(.qr) .card{padding:65px 28px!important;background:linear-gradient(145deg,#fffdf9,#f5e8f3 55%,#fffdfa)!important}
+.section:has(.qr) .qr{position:relative;z-index:2;box-shadow:0 16px 35px #4d2c581f}
+.section:has(.qr) .card:after{content:"❀   ✦   ❀"!important;color:#b58aaf;font-size:22px;margin-top:30px}
+@media(max-width:600px){
+ .section:has(.people):before,.section:has(.qr):before{font-size:105px!important;left:-35px!important}
+ .section:has(.people):after,.section:has(.qr):after{font-size:100px!important;right:-32px!important}
+}
 </style>
 </head>
 <body>
