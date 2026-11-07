@@ -28,10 +28,25 @@ body{background:#f7f0f7}.hero,.section,.closing{background-image:radial-gradient
 .people{width:100%;max-width:650px;margin:auto;gap:0 38px}.person{min-height:63px;border-bottom:1px solid #b69ab733}.num{color:#b18a4d;font-size:17px}.name{font-size:22px}
 .qr{padding:18px;border:8px solid #f8f1f7;outline:1px solid #c8a45c;outline-offset:5px}.closing{background:linear-gradient(145deg,#e5d2e9,#fffdf9 48%,#d9c0df);padding:70px 20px}
 @media(max-width:600px){.hero h1{font-size:88px}.hero .big18{top:17%;font-size:67vw}.hero-photo{max-height:48svh}.section{padding:58px 0}.card{width:94vw;padding:48px 18px}.people{grid-template-columns:1fr}.name{font-size:20px}}
+
+/* Cinematic envelope reveal */
+#opening{background:radial-gradient(circle at 50% 28%,#fffdfd 0,#f5e9f3 42%,#dac8e2 100%);overflow:hidden}
+#opening:before,#opening:after{content:"";position:absolute;width:55vw;height:55vw;border:1px solid #c7a56a44;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%)}#opening:after{width:72vw;height:72vw;border-color:#9b76a544}
+.open-wrap{position:relative;z-index:2}.envelope{width:min(88vw,680px);height:min(56vw,420px);min-height:250px;transform-style:preserve-3d;transition:transform .9s cubic-bezier(.2,.85,.25,1),filter .5s;filter:drop-shadow(0 30px 35px #29123238)}
+.envelope:hover{transform:translateY(-5px)}.env-back{background:linear-gradient(145deg,#5f3a6b,#2d1538);border:1px solid #7e5b87}
+.env-front{background:linear-gradient(135deg,#34183f,#62406d);box-shadow:inset 0 1px #ffffff22}
+.env-flap{background:linear-gradient(165deg,#70497c,#32183d);transition:transform 1.15s cubic-bezier(.16,.82,.18,1),z-index .01s linear 1.15s;backface-visibility:hidden}
+.ornament{inset:18%;border:1px solid #d5b66e;border-radius:50%;box-shadow:0 0 0 8px #d5b66e18,0 0 0 15px #ffffff08}.ornament:before,.ornament:after{content:"✦";position:absolute;color:#d9bb77;font-size:25px;left:50%;transform:translateX(-50%)}.ornament:before{top:-18px}.ornament:after{bottom:-18px}
+.seal{width:104px;height:104px;background:radial-gradient(circle at 35% 25%,#9a70a5,#4a2658 64%,#32183d);border:3px solid #dfc47f;box-shadow:0 0 0 6px #4a275555,0 9px 20px #1c0a2588}.seal:after{content:"";position:absolute;inset:9px;border:1px solid #e1c47e88;border-radius:50%}
+.open-text{font-size:11px;letter-spacing:.34em;margin-top:34px;color:#61456b;animation:pulse 2s ease-in-out infinite}@keyframes pulse{50%{opacity:.5;letter-spacing:.42em}}
+.opening .env-flap{transform:rotateX(-180deg);z-index:1}.opening .seal{opacity:0;transform:translate(-50%,-70%) scale(.72)}.opening .envelope{transform:translateY(-8px) scale(1.02)}.opening #opening{opacity:1;visibility:visible}
+#opening.revealing{animation:revealOut 1.15s .15s cubic-bezier(.65,0,.25,1) forwards}@keyframes revealOut{0%{clip-path:circle(100% at 50% 50%);opacity:1}100%{clip-path:circle(0% at 50% 50%);opacity:0;visibility:hidden}}
+main{transform:translateY(45px) scale(.985);filter:blur(5px);transition:opacity 1s .75s,transform 1.2s .75s cubic-bezier(.16,1,.3,1),filter 1s .75s}body.opened main{transform:none;filter:none}
+.hero-card>*{animation:none}.opened .hero-card>*{animation:rise .9s both}@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}.opened .hero-card>*:nth-child(2){animation-delay:.12s}.opened .hero-card>*:nth-child(3){animation-delay:.2s}.opened .hero-card>*:nth-child(4){animation-delay:.28s}.opened .hero-card>*:nth-child(5){animation-delay:.4s}
 </style>
 </head>
 <body>
-<div id="opening"><div class="open-wrap"><div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Open invitation"><div class="env-back"></div><div class="ornament"></div><div class="env-flap"></div><div class="env-front"></div><div class="seal">✿</div></div><div class="open-text">OPENING INVITATION...</div></div></div>
+<div id="opening"><div class="open-wrap"><div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Open invitation"><div class="env-back"></div><div class="ornament"></div><div class="env-flap"></div><div class="env-front"></div><div class="seal">✿</div></div><div class="open-text">TAP TO OPEN YOUR INVITATION</div></div></div>
 <audio id="music" loop preload="none"></audio><button class="music-btn" id="musicBtn" aria-label="Play or pause music">♫</button>
 <main>
 <section class="hero"><div class="floral" style="left:-35px;top:5%">✿</div><div class="floral" style="right:-35px;bottom:5%">❀</div><div class="hero-card"><div class="eyebrow">A CELEBRATION OF EIGHTEEN</div><div class="big18">18</div><h1>Trisha Jade</h1><img class="hero-photo" src="trisha-1.png" alt="Trisha Jade"><div class="date">JANUARY 2, 2027 · SATURDAY · 5:00 PM</div><div class="venue">TADECO RESORT<br>MONPERT SUBD. · BO. SAN ISIDRO<br>TAYTAY, RIZAL</div><div class="scroll">SCROLL TO EXPLORE ↓</div></div></section>
@@ -44,7 +59,13 @@ body{background:#f7f0f7}.hero,.section,.closing{background-image:radial-gradient
 </main>
 <script>
 const envelope=document.getElementById('envelope'),music=document.getElementById('music'),btn=document.getElementById('musicBtn');
-function openInvite(){if(document.body.classList.contains('opened'))return;document.body.classList.add('opening');setTimeout(()=>{document.body.classList.add('opened');music.play().catch(()=>{});document.getElementById('opening').setAttribute('aria-hidden','true')},850)}
+function openInvite(){
+ if(document.body.classList.contains('opened'))return;
+ document.body.classList.add('opening');
+ envelope.style.pointerEvents='none';
+ setTimeout(()=>{document.getElementById('opening').classList.add('revealing');document.body.classList.add('opened');music.play().catch(()=>{});},1250);
+ setTimeout(()=>{const o=document.getElementById('opening');o.setAttribute('aria-hidden','true');o.style.display='none';window.scrollTo({top:0,behavior:'instant'});},2550);
+}
 envelope.addEventListener('click',openInvite);envelope.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')openInvite()});btn.addEventListener('click',()=>{if(music.paused){music.play().catch(()=>{});btn.textContent='❚❚'}else{music.pause();btn.textContent='♫'}});music.addEventListener('play',()=>btn.textContent='❚❚');music.addEventListener('pause',()=>btn.textContent='♫');
 const target=new Date('2027-01-02T17:00:00+08:00'), boxes=document.querySelectorAll('#countdown b');function tick(){let d=Math.max(0,target-Date.now());let s=Math.floor(d/1000),v=[Math.floor(s/86400),Math.floor(s%86400/3600),Math.floor(s%3600/60),s%60];boxes.forEach((b,i)=>b.textContent=String(v[i]).padStart(2,'0'))}tick();setInterval(tick,1000);
 </script></body></html>
