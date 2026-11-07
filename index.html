@@ -71,6 +71,32 @@ main{transform:translateY(45px) scale(.985);filter:blur(5px);transition:opacity 
 .hero-card h1{margin-top:6vh!important;position:relative;z-index:2}
 .hero-card .eyebrow,.hero-card .date,.hero-card .venue{position:relative;z-index:2}
 .hero-card:after{content:"✦   ❀   ✦   ❀   ✦";position:absolute!important;top:auto!important;bottom:9%!important;left:50%;transform:translateX(-50%);white-space:nowrap;color:#b79455!important;font-size:14px!important;letter-spacing:10px!important}
+
+/* ===== LUXURY ENVELOPE REDESIGN ===== */
+#opening{display:grid;place-items:center;min-height:100svh;background:
+ radial-gradient(ellipse at 50% 15%,#fffdfd 0%,#f5e8f3 42%,#dfcbe4 100%);}
+#opening:before{content:"";position:absolute;inset:0;opacity:.55;background-image:radial-gradient(#b38ab633 .7px,transparent .7px);background-size:18px 18px}
+.open-wrap{width:min(92vw,720px);display:grid;place-items:center}
+.envelope{width:min(86vw,650px)!important;height:min(55vw,405px)!important;min-height:260px;position:relative;perspective:1600px;filter:drop-shadow(0 28px 30px #32163d38)}
+.env-back{position:absolute;inset:0;border-radius:7px 7px 3px 3px;background:linear-gradient(145deg,#43204f,#24102d 68%,#351640);border:1px solid #8e6995;box-shadow:inset 0 1px #ffffff22}
+.env-back:before{content:"";position:absolute;inset:11px;border:1px solid #c7a75f77;border-radius:4px}
+.env-front{position:absolute;z-index:6;left:0;right:0;bottom:0;height:67%;clip-path:polygon(0 0,50% 68%,100% 0,100% 100%,0 100%);background:linear-gradient(145deg,#4c2759,#2b1335);border-radius:0 0 4px 4px;box-shadow:inset 0 1px #ffffff12}
+.env-front:after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 35%,#ffffff0d 50%,transparent 65%)}
+.env-flap{position:absolute!important;z-index:8!important;left:0!important;top:0!important;width:100%!important;height:59%!important;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:50% 0%!important;transform:rotateX(0deg)!important;background:linear-gradient(155deg,#633a70,#32173e)!important;backface-visibility:hidden;border-radius:7px 7px 0 0}
+.env-flap:after{content:"";position:absolute;inset:9% 14% 20%;border:1px solid #d8ba7288;clip-path:polygon(50% 0,100% 100%,0 100%)}
+.ornament{z-index:3!important;inset:19%!important;border:1px solid #d8b96f!important;border-radius:50%!important;box-shadow:0 0 0 7px #d8b96f12,0 0 0 14px #ffffff08!important}
+.ornament:before{content:"✦  ❀  ✦"!important;font-family:serif;font-size:24px!important;letter-spacing:7px;color:#e0c37f;position:absolute;top:42%!important;left:50%;transform:translate(-50%,-50%)!important;white-space:nowrap}
+.ornament:after{content:"TRISHA JADE"!important;position:absolute;bottom:16%!important;left:50%;transform:translateX(-50%)!important;font-size:7px!important;letter-spacing:.45em;white-space:nowrap;color:#d9bb76}
+.invitation-paper{z-index:4!important;left:8%!important;right:8%!important;bottom:7%!important;height:84%!important;background:linear-gradient(135deg,#fffefa,#f6eee5)!important;border:1px solid #c9aa6b!important;border-radius:2px!important;box-shadow:0 10px 18px #180b2244,inset 0 0 0 6px #fffefa,inset 0 0 0 7px #d8bb8166!important}
+.invitation-paper:before{content:"✦   ❀   ✦"!important;top:8%!important;color:#a98144!important}
+.invitation-paper:after{content:"TRISHA JADE\A CELEBRATION OF EIGHTEEN\JANUARY 2, 2027"!important;color:#4d2b57!important;font-size:10px!important;line-height:2.7!important;top:29%!important}
+.seal{z-index:12!important;width:94px!important;height:94px!important;background:radial-gradient(circle at 33% 25%,#8b5c99,#542963 62%,#35163f)!important;border:3px solid #d8ba74!important;box-shadow:0 0 0 6px #2b123744,0 12px 22px #1d092a66!important;font-size:0!important}
+.seal:before{content:"✿"!important;position:absolute;inset:13px;border:1px solid #e0c68099;border-radius:50%;display:grid;place-items:center;color:#e6cb82;font-size:37px;line-height:1}
+.seal:after{content:""!important}
+.open-text{font-family:"Playfair Display",serif!important;font-size:10px!important;letter-spacing:.38em!important;color:#62476d!important;margin-top:40px!important}
+#opening.phase-flap .env-flap{transform:rotateX(-175deg)!important;transition:transform 1350ms cubic-bezier(.16,.82,.18,1)!important}
+#opening.phase-paper .invitation-paper{transform:translateY(-34%) scale(1.01)!important;transition:transform 1250ms cubic-bezier(.16,1,.3,1)!important}
+@media(max-width:600px){.envelope{height:56vw!important;min-height:235px}.seal{width:76px!important;height:76px!important}.seal:before{font-size:29px}.invitation-paper:after{font-size:8px!important}.ornament{inset:17%!important}}
 </style>
 </head>
 <body>
