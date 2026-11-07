@@ -63,13 +63,21 @@ main{transform:translateY(45px) scale(.985);filter:blur(5px);transition:opacity 
 #opening.phase-flap .env-flap{transform:rotateX(-178deg)!important}
 #opening.phase-paper .invitation-paper{transform:translateY(-27%) scale(1.01)!important}
 #opening.phase-flap .seal{opacity:0;transform:translate(-50%,-64%) scale(.78)}
+
+/* Photo-free opening title composition */
+.hero-card{position:relative;overflow:hidden;background:radial-gradient(circle at 50% 42%,#fffdfb 0 16%,transparent 48%),linear-gradient(145deg,#ead8ee,#fffdfa 48%,#e4cfe9)!important}
+.hero-card:before{content:"";position:absolute;inset:24px;border:1px solid #b899b955;box-shadow:inset 0 0 0 7px #ffffff66,0 0 0 1px #d3b27722}
+.hero-card .big18{position:absolute!important;top:50%!important;left:50%!important;transform:translate(-50%,-52%)!important;font-size:min(72vw,500px)!important;line-height:.8!important;opacity:.16!important;letter-spacing:-.08em}
+.hero-card h1{margin-top:6vh!important;position:relative;z-index:2}
+.hero-card .eyebrow,.hero-card .date,.hero-card .venue{position:relative;z-index:2}
+.hero-card:after{content:"✦   ❀   ✦   ❀   ✦";position:absolute!important;top:auto!important;bottom:9%!important;left:50%;transform:translateX(-50%);white-space:nowrap;color:#b79455!important;font-size:14px!important;letter-spacing:10px!important}
 </style>
 </head>
 <body>
 <div id="opening"><div class="open-wrap"><div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Open invitation"><div class="env-back"></div><div class="invitation-paper"></div><div class="ornament"></div><div class="env-flap"></div><div class="env-front"></div><div class="seal">✿</div></div><div class="open-text">TAP TO OPEN YOUR INVITATION</div></div></div>
 <audio id="music" loop preload="auto"><source src="closer.mp3" type="audio/mpeg"></audio><button class="music-btn" id="musicBtn" aria-label="Play or pause music">♫</button>
 <main>
-<section class="hero"><div class="floral" style="left:-35px;top:5%">✿</div><div class="floral" style="right:-35px;bottom:5%">❀</div><div class="hero-card"><div class="eyebrow">A CELEBRATION OF EIGHTEEN</div><div class="big18">18</div><h1>Trisha Jade</h1><img class="hero-photo" src="trisha-3.png" alt="Trisha Jade"><div class="date">JANUARY 2, 2027 · SATURDAY · 5:00 PM</div><div class="venue">TADECO RESORT<br>MONPERT SUBD. · BO. SAN ISIDRO<br>TAYTAY, RIZAL</div><div class="scroll">SCROLL TO EXPLORE ↓</div></div></section>
+<section class="hero"><div class="floral" style="left:-35px;top:5%">✿</div><div class="floral" style="right:-35px;bottom:5%">❀</div><div class="hero-card"><div class="eyebrow">A CELEBRATION OF EIGHTEEN</div><div class="big18">18</div><h1>Trisha Jade</h1><div class="date">JANUARY 2, 2027 · SATURDAY · 5:00 PM</div><div class="venue">TADECO RESORT<br>MONPERT SUBD. · BO. SAN ISIDRO<br>TAYTAY, RIZAL</div><div class="scroll">SCROLL TO EXPLORE ↓</div></div></section>
 <section class="section"><div class="card"><img class="portrait" src="trisha-2.png" alt="Trisha Jade"><h2 class="script">We can't wait</h2><p class="lead">to celebrate this beautiful milestone with you.</p></div></section>
 <section class="section"><div class="card"><div class="kicker">THE COUNTDOWN BEGINS</div><h2 class="section-title">Counting Down</h2><div class="divider">✦ ❀ ✦</div><div class="countdown" id="countdown"><div><b>--</b><span>DAYS</span></div><div><b>--</b><span>HOURS</span></div><div><b>--</b><span>MINUTES</span></div><div><b>--</b><span>SECONDS</span></div></div></div></section>
 <section class="section"><div class="card"><img class="portrait" src="trisha-4.png" alt="Trisha Jade"><div class="kicker">THE DETAILS</div><h2 class="script">Save the Date</h2><div class="divider">✦ ❀ ✦</div><div class="details"><strong>January 2, 2027</strong><br>Saturday · 5:00 PM<br><br><strong>Tadeco Resort</strong><br>Monpert Subd.<br>Bo. San Isidro<br>Taytay, Rizal</div></div></section>
