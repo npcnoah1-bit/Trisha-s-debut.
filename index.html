@@ -106,6 +106,21 @@ body.opening .seal{opacity:1!important}
 #opening.phase-flap .seal{opacity:0!important;transform:translate(-50%,-64%) scale(.78)!important}
 #opening.phase-paper .invitation-paper{transform:translateY(-34%) scale(1.01)!important}
 #opening.phase-flap .env-flap{backface-visibility:hidden;-webkit-backface-visibility:hidden}
+
+/* ===== ART-DIRECTED 18s GALLERY ===== */
+.people{position:relative;display:grid!important;grid-template-columns:1fr 1fr!important;gap:13px 24px!important;max-width:720px;margin:32px auto 0;padding:34px 24px!important;background:linear-gradient(145deg,#fffdf9,#f4e9f2);border:1px solid #c7a66c;box-shadow:0 18px 40px #4b2b5714}
+.people:before,.people:after{position:absolute;left:50%;transform:translateX(-50%);font-family:"Playfair Display",serif;color:#b79255;letter-spacing:.45em;font-size:10px;white-space:nowrap}
+.people:before{content:"✦  EIGHTEEN  ✦";top:12px}.people:after{content:"❀  CELEBRATING HER STORY  ❀";bottom:12px;font-size:8px;letter-spacing:.25em}
+.person{position:relative;display:grid!important;grid-template-columns:44px 1fr!important;align-items:center;min-height:66px!important;border:0!important;background:linear-gradient(90deg,#ffffffaa,transparent);padding:4px 8px 4px 0}
+.person:after{content:"";position:absolute;left:44px;right:0;bottom:0;height:1px;background:linear-gradient(90deg,#c7a66c88,transparent)}
+.num{width:34px;height:34px;border:1px solid #b99559;border-radius:50%;display:grid;place-items:center;font-size:11px!important;letter-spacing:.04em;background:#fffdf8;color:#805e38!important}
+.name{font-family:"Cormorant Garamond","Playfair Display",serif!important;font-size:24px!important;line-height:1.05;color:#43294e;padding-left:7px}
+.section:has(.people){position:relative;overflow:hidden;background:radial-gradient(circle at 8% 8%,#d7b7dc55 0 2px,transparent 3px),radial-gradient(circle at 92% 88%,#c6a36544 0 2px,transparent 3px),linear-gradient(135deg,#efe0f1,#fffdf9 48%,#ead6ed)!important}
+.section:has(.people) .card{position:relative;background:#fffdfbcc!important;outline:0!important;border:0!important;box-shadow:none!important;padding-top:65px!important}
+.section:has(.people) .card:before{content:"❀"!important;position:absolute;top:14px;left:50%;transform:translateX(-50%);font-size:40px;color:#b58abc}
+.section:has(.people) .section-title{font-family:"Cormorant Garamond","Playfair Display",serif!important;font-size:clamp(62px,12vw,108px)!important;line-height:.85;color:#4d2d59;text-transform:none;letter-spacing:-.04em}
+.section:has(.people) .kicker{color:#aa8349;letter-spacing:.38em;margin-bottom:14px}
+@media(max-width:700px){.people{grid-template-columns:1fr!important;padding:34px 16px!important;gap:5px!important}.person{grid-template-columns:42px 1fr!important;min-height:61px!important}.name{font-size:22px!important}.section:has(.people) .card{padding-left:8px!important;padding-right:8px!important}}
 </style>
 </head>
 <body>
