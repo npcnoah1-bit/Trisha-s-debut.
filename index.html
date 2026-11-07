@@ -243,3 +243,79 @@ function openInvite(){
 envelope.addEventListener('click',openInvite);envelope.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')openInvite()});btn.addEventListener('click',()=>{if(music.paused){music.play().catch(()=>{});btn.textContent='❚❚'}else{music.pause();btn.textContent='♫'}});music.addEventListener('play',()=>btn.textContent='❚❚');music.addEventListener('pause',()=>btn.textContent='♫');
 const target=new Date('2027-01-02T17:00:00+08:00'), boxes=document.querySelectorAll('#countdown b');function tick(){let d=Math.max(0,target-Date.now());let s=Math.floor(d/1000),v=[Math.floor(s/86400),Math.floor(s%86400/3600),Math.floor(s%3600/60),s%60];boxes.forEach((b,i)=>b.textContent=String(v[i]).padStart(2,'0'))}tick();setInterval(tick,1000);
 </script></body></html>
+
+/* ===== FULLER FLORAL FRAME — closer to the original invitation ===== */
+#opening .open-wrap:before,#opening .open-wrap:after{
+  width:clamp(210px,36vw,390px)!important;
+  height:clamp(255px,43vw,470px)!important;
+  opacity:1!important;
+}
+#opening .open-wrap:before{left:-13%!important;top:-31%!important}
+#opening .open-wrap:after{right:-13%!important;bottom:-43%!important}
+
+.hero-card{
+  background-image:
+    url('floral-corner.svg'),url('floral-corner-flip.svg'),
+    url('floral-corner-flip.svg'),url('floral-corner.svg'),
+    radial-gradient(circle at 50% 42%,#fffdfb 0 16%,transparent 48%),
+    linear-gradient(145deg,#ead8ee,#fffdfa 48%,#e4cfe9)!important;
+  background-repeat:no-repeat!important;
+  background-size:clamp(230px,36vw,390px) auto,clamp(230px,36vw,390px) auto,clamp(230px,36vw,390px) auto,clamp(230px,36vw,390px) auto,cover,cover!important;
+  background-position:left top,right top,left bottom,right bottom,center,center!important;
+}
+
+/* Every scroll section gets a full four-corner botanical frame, not just the 18s lists. */
+.section .card{
+  position:relative!important;
+  overflow:hidden!important;
+  background-image:
+    url('floral-corner.svg'),url('floral-corner-flip.svg'),
+    url('floral-corner-flip.svg'),url('floral-corner.svg')!important;
+  background-repeat:no-repeat!important;
+  background-size:clamp(135px,20vw,205px) auto,clamp(135px,20vw,205px) auto,clamp(135px,20vw,205px) auto,clamp(135px,20vw,205px) auto!important;
+  background-position:left top,right top,left bottom,right bottom!important;
+}
+.section .card>*{position:relative;z-index:1}
+.section:has(.people):before,.section:has(.people):after{
+  width:clamp(190px,27vw,300px)!important;
+  height:clamp(235px,34vw,370px)!important;
+  opacity:.95!important;
+}
+.section:has(.people):before{top:-12px!important;left:-14px!important}
+.section:has(.people):after{right:-14px!important;bottom:-12px!important}
+.section:has(.people) .card{
+  background-color:#fffdf8ed!important;
+  background-image:
+    url('floral-corner.svg'),url('floral-corner-flip.svg'),
+    url('floral-corner-flip.svg'),url('floral-corner.svg')!important;
+  background-size:clamp(145px,20vw,215px) auto,clamp(145px,20vw,215px) auto,clamp(145px,20vw,215px) auto,clamp(145px,20vw,215px) auto!important;
+  background-position:left top,right top,left bottom,right bottom!important;
+}
+.section:last-of-type .card{
+  background-image:
+    url('floral-corner.svg'),url('floral-corner-flip.svg'),
+    url('floral-corner-flip.svg'),url('floral-corner.svg')!important;
+  background-size:180px auto,180px auto,180px auto,180px auto!important;
+  background-position:left top,right top,left bottom,right bottom!important;
+}
+@media(max-width:700px){
+  #opening .open-wrap:before{left:-24%!important;top:-28%!important;width:205px!important;height:250px!important}
+  #opening .open-wrap:after{right:-23%!important;bottom:-39%!important;width:205px!important;height:250px!important}
+  .hero-card{
+    background-size:170px auto,170px auto,170px auto,170px auto,cover,cover!important;
+    background-position:left top,right top,left bottom,right bottom,center,center!important;
+  }
+  .section .card{
+    background-size:118px auto,118px auto,118px auto,118px auto!important;
+    background-position:left top,right top,left bottom,right bottom!important;
+  }
+  .section:has(.people):before,.section:has(.people):after{
+    width:155px!important;height:190px!important;opacity:.82!important;
+  }
+  .section:has(.people) .card{
+    background-size:125px auto,125px auto,125px auto,125px auto!important;
+  }
+  .section:last-of-type .card{
+    background-size:125px auto,125px auto,125px auto,125px auto!important;
+  }
+}
