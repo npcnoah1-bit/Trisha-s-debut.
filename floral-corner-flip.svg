@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="820" viewBox="0 0 680 820" fill="none"><g transform="translate(680 0) scale(-1 1)">
+<defs>
+ <linearGradient id="petal" x1="120" y1="120" x2="470" y2="530" gradientUnits="userSpaceOnUse"><stop stop-color="#fff9fb"/><stop offset=".48" stop-color="#d9b8dc"/><stop offset="1" stop-color="#a77eaf"/></linearGradient>
+ <linearGradient id="petal2" x1="210" y1="170" x2="480" y2="540" gradientUnits="userSpaceOnUse"><stop stop-color="#fffdfb"/><stop offset=".55" stop-color="#e8cddd"/><stop offset="1" stop-color="#b58bb8"/></linearGradient>
+ <linearGradient id="leaf" x1="190" y1="300" x2="480" y2="720" gradientUnits="userSpaceOnUse"><stop stop-color="#9eaa83"/><stop offset="1" stop-color="#526b57"/></linearGradient>
+ <linearGradient id="lav" x1="330" y1="170" x2="540" y2="690" gradientUnits="userSpaceOnUse"><stop stop-color="#d9c1e3"/><stop offset="1" stop-color="#89669d"/></linearGradient>
+ <radialGradient id="center"><stop stop-color="#d6b66e"/><stop offset=".65" stop-color="#a77b45"/><stop offset="1" stop-color="#77543b"/></radialGradient>
+</defs>
+<!-- fine stems -->
+<g stroke="#78866a" stroke-width="3" stroke-linecap="round" opacity=".86">
+<path d="M92 760C160 610 230 450 340 300S500 140 590 70"/>
+<path d="M132 780C190 630 250 540 270 390S260 220 235 100"/>
+<path d="M155 790C250 680 360 590 440 450S540 270 560 180"/>
+<path d="M75 650C160 590 215 520 250 420"/>
+</g>
+<!-- leaves -->
+<g fill="url(#leaf)" stroke="#65785f" stroke-width="1.5">
+<path d="M172 638C88 632 56 575 65 522C125 528 174 563 172 638Z"/><path d="M172 638Q119 579 65 522"/>
+<path d="M230 548C147 532 119 473 137 425C197 440 240 484 230 548Z"/><path d="M230 548Q188 477 137 425"/>
+<path d="M286 453C211 426 196 367 224 323C280 350 311 399 286 453Z"/><path d="M286 453Q257 383 224 323"/>
+<path d="M350 355C281 318 278 258 314 222C365 263 385 313 350 355Z"/><path d="M350 355Q342 282 314 222"/>
+<path d="M384 578C394 504 449 468 499 486C487 547 444 590 384 578Z"/><path d="M384 578Q437 526 499 486"/>
+<path d="M454 455C467 384 522 354 569 376C551 434 509 472 454 455Z"/><path d="M454 455Q508 407 569 376"/>
+<path d="M490 315C505 250 555 223 598 246C579 300 540 334 490 315Z"/><path d="M490 315Q541 272 598 246"/>
+<path d="M123 730C58 710 39 663 59 626C109 644 139 683 123 730Z"/><path d="M123 730Q91 673 59 626"/>
+</g>
+<!-- peony rear petals -->
+<g stroke="#b58caf" stroke-width="2">
+<path fill="url(#petal)" d="M251 340C185 304 172 245 218 213C257 185 302 217 310 270C340 205 398 203 422 246C446 289 414 334 362 354C427 354 451 405 422 445C391 486 334 465 307 418C297 477 240 496 207 458C176 421 197 370 251 340Z"/>
+<path fill="url(#petal2)" d="M270 335C222 285 236 236 277 224C313 214 341 249 337 293C365 247 410 252 425 286C442 326 410 357 370 366C420 381 425 425 395 448C365 470 327 441 309 405C291 449 247 451 228 419C210 386 233 353 270 335Z"/>
+<path fill="#f5e5ee" d="M286 338C266 305 281 277 307 279C331 280 344 303 333 329C356 301 383 312 383 338C384 363 359 376 338 366C356 394 337 414 315 406C294 398 291 373 304 357C278 374 258 357 266 338C271 326 278 329 286 338Z"/>
+</g>
+<circle cx="323" cy="351" r="17" fill="url(#center)"/><g fill="#f7e8bf"><circle cx="317" cy="345" r="2.5"/><circle cx="329" cy="346" r="2"/><circle cx="324" cy="357" r="2.3"/><circle cx="314" cy="356" r="1.8"/><circle cx="334" cy="355" r="1.7"/></g>
+<!-- smaller bloom -->
+<g stroke="#c09abb" stroke-width="1.6">
+<path fill="url(#petal2)" d="M438 522C402 494 408 456 438 445C465 435 489 456 486 485C505 458 539 465 545 490C551 517 528 535 501 534C528 552 520 581 496 588C471 594 455 570 457 548C440 573 410 564 405 541C402 529 417 519 438 522Z"/>
+<path fill="#f5e7ef" d="M456 520C442 500 453 481 469 485C483 489 486 504 478 517C496 502 511 512 505 527C499 542 482 542 473 532C480 552 462 561 451 548C441 536 449 526 456 520Z"/>
+</g><circle cx="473" cy="524" r="8" fill="url(#center)"/>
+<!-- small rosebud -->
+<g stroke="#bd98b8" stroke-width="1.5"><path fill="url(#petal)" d="M190 250C163 220 174 184 202 178C225 173 242 193 233 216C256 201 278 219 270 242C262 264 233 269 216 251C211 279 180 285 166 263C158 250 172 238 190 250Z"/><path fill="#f8eaf0" d="M199 240C187 222 198 207 212 213C224 218 222 232 214 240C232 228 242 240 234 251C226 262 210 255 208 247C202 261 186 256 187 246Z"/></g>
+<!-- lavender sprigs -->
+<g stroke="#88709b" stroke-width="2" fill="none" stroke-linecap="round">
+<path d="M530 706C535 570 570 423 617 287"/><path d="M566 742C570 610 598 500 641 402"/><path d="M450 710C465 590 476 500 492 400"/>
+</g>
+<g fill="url(#lav)" stroke="#8f719e" stroke-width="1">
+<ellipse cx="606" cy="318" rx="10" ry="20" transform="rotate(22 606 318)"/><ellipse cx="617" cy="290" rx="9" ry="18" transform="rotate(28 617 290)"/><ellipse cx="626" cy="263" rx="8" ry="16" transform="rotate(30 626 263)"/><ellipse cx="632" cy="238" rx="7" ry="14" transform="rotate(25 632 238)"/>
+<ellipse cx="628" cy="444" rx="10" ry="19" transform="rotate(22 628 444)"/><ellipse cx="638" cy="418" rx="9" ry="17" transform="rotate(25 638 418)"/><ellipse cx="648" cy="392" rx="8" ry="15" transform="rotate(25 648 392)"/>
+<ellipse cx="484" cy="451" rx="9" ry="17" transform="rotate(12 484 451)"/><ellipse cx="489" cy="427" rx="8" ry="15" transform="rotate(14 489 427)"/><ellipse cx="493" cy="405" rx="7" ry="13" transform="rotate(16 493 405)"/>
+</g>
+<!-- tiny gold botanical accents -->
+<g stroke="#bd9a5b" stroke-width="1.5" fill="none" opacity=".8"><path d="M70 430Q112 390 143 350M94 410l-22-20m39 2 4-26m-1 62 26-10M530 160q40-36 68-70m-34 34 0-25m17 8 22-4"/></g>
+</g></svg>
