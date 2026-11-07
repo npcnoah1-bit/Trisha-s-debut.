@@ -151,6 +151,29 @@ body.opening .seal{opacity:1!important}
   transform:translateY(-34%) scale(1.01)!important;
   transition:transform 1250ms cubic-bezier(.16,1,.3,1),opacity 180ms ease!important;
 }
+
+/* Floral art direction — layered, asymmetrical botanical framing */
+.hero,.section,.closing{position:relative;overflow:hidden}
+.hero:before,.hero:after,.section:before,.section:after{
+  position:absolute;z-index:0;pointer-events:none;line-height:1;
+  font-family:Georgia,serif;font-weight:400;
+  color:#a66aa855;text-shadow:22px 12px 0 #d9b9da66,-18px 26px 0 #b789b844;
+}
+.hero:before{content:"❀ ✿ ❀";font-size:150px;left:-42px;top:8%;transform:rotate(-18deg)}
+.hero:after{content:"✿ ❀";font-size:125px;right:-30px;bottom:7%;transform:rotate(25deg)}
+.section:before{content:"❀";font-size:180px;left:-58px;top:4%;transform:rotate(-22deg)}
+.section:after{content:"✿";font-size:170px;right:-52px;bottom:5%;transform:rotate(24deg)}
+.hero>*,.section>*{position:relative;z-index:1}
+.section:nth-of-type(3n):before{content:"✿ ❀";top:10%;font-size:130px}
+.section:nth-of-type(3n):after{content:"❀ ✿";bottom:10%;font-size:120px}
+.card{position:relative}
+.card:after{content:"❀  ·  ✦  ·  ❀";display:block;margin:24px auto 0;text-align:center;color:#b68aaf;font-size:18px;letter-spacing:8px}
+.section:has(.people) .card:after{display:none}
+.section:has(.people) .people:before{background:#fffdf9;padding:0 12px}
+@media(max-width:600px){
+ .hero:before{font-size:105px;left:-35px}.hero:after{font-size:95px;right:-28px}
+ .section:before{font-size:125px;left:-48px}.section:after{font-size:115px;right:-45px}
+}
 </style>
 </head>
 <body>
