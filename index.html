@@ -292,6 +292,29 @@ body.opening .seal{opacity:1!important}
 .section:last-of-type .card{
   background-image:none!important;
 }
+
+/* CONTROL FLORAL PLACEMENT: keep flowers on designed focal areas, not scattered across every background. */
+.section .card{
+  background-image:none!important;
+}
+.section:has(.people):before,
+.section:has(.people):after{
+  content:none!important;
+  display:none!important;
+}
+.section:has(.people) .card{
+  background-image:
+    url('floral-corner.svg'),url('floral-corner-flip.svg'),
+    url('floral-corner-flip.svg'),url('floral-corner.svg')!important;
+}
+.section:last-of-type .card:before,
+.section:last-of-type .card:after{
+  content:none!important;
+  display:none!important;
+}
+.section:last-of-type .card{
+  background-image:none!important;
+}
 </style>
 </head>
 <body>
