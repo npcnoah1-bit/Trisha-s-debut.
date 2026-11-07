@@ -121,6 +121,19 @@ body.opening .seal{opacity:1!important}
 .section:has(.people) .section-title{font-family:"Cormorant Garamond","Playfair Display",serif!important;font-size:clamp(62px,12vw,108px)!important;line-height:.85;color:#4d2d59;text-transform:none;letter-spacing:-.04em}
 .section:has(.people) .kicker{color:#aa8349;letter-spacing:.38em;margin-bottom:14px}
 @media(max-width:700px){.people{grid-template-columns:1fr!important;padding:34px 16px!important;gap:5px!important}.person{grid-template-columns:42px 1fr!important;min-height:61px!important}.name{font-size:22px!important}.section:has(.people) .card{padding-left:8px!important;padding-right:8px!important}}
+
+/* Closed envelope: keep the invitation completely hidden behind the front until opened */
+#opening:not(.phase-paper) .invitation-paper{
+  transform:translateY(52%)!important;
+}
+#opening:not(.phase-paper) .invitation-paper{visibility:hidden}
+#opening.phase-flap .invitation-paper{visibility:visible}
+#opening.phase-paper .invitation-paper{
+  visibility:visible;
+  transform:translateY(-34%) scale(1.01)!important;
+}
+#opening .env-front{z-index:10!important}
+#opening .invitation-paper{z-index:4!important}
 </style>
 </head>
 <body>
